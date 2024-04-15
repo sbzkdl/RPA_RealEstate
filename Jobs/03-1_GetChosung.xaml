@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>486,1315</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1205,1345</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_03_1_GetChosung_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,7 +114,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_03_1_GetChosung" sap:VirtualizedContainerService.HintSize="496,1250" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_03_1_GetChosung" sap:VirtualizedContainerService.HintSize="496,1280" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strFrist" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="list_chosung" />
@@ -126,7 +126,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Data Extraction Start. .&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Get Chosung Start. .&quot;]" />
     <Assign sap2010:Annotation.AnnotationText="chosungs = {&quot;ㄱ&quot;, &quot;ㄲ&quot;, &quot;ㄴ&quot;, &quot;ㄷ&quot;, &quot;ㄸ&quot;, &quot;ㄹ&quot;, &quot;ㅁ&quot;, &quot;ㅂ&quot;, &quot;ㅃ&quot;, &quot;ㅅ&quot;, &quot;ㅆ&quot;, &quot;ㅇ&quot; , &quot;ㅈ&quot;, &quot;ㅉ&quot;, &quot;ㅊ&quot;, &quot;ㅋ&quot;, &quot;ㅌ&quot;, &quot;ㅍ&quot;, &quot;ㅎ&quot;}&#xA;&#xA;jungsungs = {&quot;ㅏ&quot;, &quot;ㅐ&quot;, &quot;ㅑ&quot;, &quot;ㅒ&quot;, &quot;ㅓ&quot;, &quot;ㅔ&quot;, &quot;ㅕ&quot;, &quot;ㅖ&quot;, &quot;ㅗ&quot;, &quot;ㅘ&quot;, &quot;ㅙ&quot;, &quot;ㅚ&quot;, &quot;ㅛ&quot;, &quot;ㅜ&quot;, &quot;ㅝ&quot;, &quot;ㅞ&quot;, &quot;ㅟ&quot;, &quot;ㅠ&quot;, &quot;ㅡ&quot;, &quot;ㅢ&quot;, &quot;ㅣ&quot;}&#xA;&#xA;jongsungs = {&quot;&quot;, &quot;ㄱ&quot;, &quot;ㄲ&quot;, &quot;ㄳ&quot;, &quot;ㄴ&quot;, &quot;ㄵ&quot;, &quot;ㄶ&quot;, &quot;ㄷ&quot;, &quot;ㄹ&quot;, &quot;ㄺ&quot;, &quot;ㄻ&quot;, &quot;ㄼ&quot;, &quot;ㄽ&quot;, &quot;ㄾ&quot;, &quot;ㄿ&quot;, &quot;ㅀ&quot;, &quot;ㅁ&quot;, &quot;ㅂ&quot;, &quot;ㅄ&quot;, &quot;ㅅ&quot;, &quot;ㅆ&quot;, &quot;ㅇ&quot;, &quot;ㅈ&quot;, &quot;ㅊ&quot;, &quot;ㅋ&quot;, &quot;ㅌ&quot;, &quot;ㅍ&quot;, &quot;ㅎ&quot;}" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[list_chosung]</OutArgument>
@@ -199,7 +199,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Assign sap2010:Annotation.AnnotationText="(초성 인덱스 * 21 + 중성 인덱스) * 28 + 종성 인덱스 + 0xAC00&#xA;&#xA;0xAC00 =&gt; 가, 44032&#xA;&#xA;chosung = (Unicode - 44032 ) / 28 / 21&#xA;jungsung = (Unicode - 44032 ) / 28 % 21&#xA;jongsung = (Unicode - 44032 ) % 28" sap:VirtualizedContainerService.HintSize="434,239" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap2010:Annotation.AnnotationText="(초성 인덱스 * 21 + 중성 인덱스) * 28 + 종성 인덱스 + 0xAC00&#xA;&#xA;0xAC00 =&gt; 가, 44032&#xA;&#xA;chosung = (Unicode - 44032 ) / 28 / 21&#xA;jungsung = (Unicode - 44032 ) / 28 % 21&#xA;jongsung = (Unicode - 44032 ) % 28&#xA;&#xA;AscW =&gt; 유니코드 추출" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[intIndex]</OutArgument>
       </Assign.To>
@@ -220,6 +220,6 @@
         <InArgument x:TypeArguments="x:String">[list_chosung(intIndex)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Data Extraction Finish. .&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Get Chosung Finish. .&quot;]" />
   </Sequence>
 </Activity>
