@@ -119,12 +119,14 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiPath_Gmail" CacheStrategy="None" DisplayName="로그인 정보 | Get Credential" FolderPath="sbzkdl@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPW]" Username="[strEmail]" />
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="- SMTP 서버명 : smtp.gmail.com, smtp.naver.com&#xA;- SMTP 포트 : 587&#xA;&#xA;- String.Format&#xA;[부동산공시] {0} 부동산공시가격 과제 제출_{1}" Body="[in_Config(&quot;메일본문&quot;).ToString]" DisplayName="메일 보내기 | Send SMTP Mail Message" Email="[strEmail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="354,335" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[strPW]" Server="smtp.gmail.com" Subject="[String.Format(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;메일제목&quot;).ToString, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyy/MM/dd&quot;), &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" To="[in_Config(&quot;과제제출&quot;).ToString]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="- SMTP 서버명 : smtp.gmail.com, smtp.naver.com&#xA;- SMTP 포트 : 587&#xA;&#xA;- String.Format&#xA;[부동산공시] {0} 부동산공시가격 과제 제출_{1}" Body="[in_Config(&quot;메일본문&quot;).ToString]" DisplayName="메일 보내기 | Send SMTP Mail Message" Email="[strEmail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="354,335" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[strPW]" Server="smtp.gmail.com" Subject="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;메일제목&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyy/MM/dd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" To="[in_Config(&quot;과제제출&quot;).ToString]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-          <InArgument x:TypeArguments="x:String">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;결과파일&quot;).ToString, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyyMMdd&quot;), &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Format(
+					in_Config("결과파일").ToString, 
+					Today.ToString("yyyyMMdd"), 
+					"박건후"
+					)]</InArgument>
         </scg:List>
       </ui:SendMail.Files>
       <sap:WorkflowViewStateService.ViewState>
