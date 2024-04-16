@@ -94,7 +94,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Flie Copy Start. .&quot;]" />
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;결과파일&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyyMMdd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" DisplayName="파일 복제 | Copy File" sap:VirtualizedContainerService.HintSize="354,194" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[in_Config(&quot;원본파일&quot;).ToString]" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;결과파일&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyyMMdd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" DisplayName="파일 복제 | Copy File" sap:VirtualizedContainerService.HintSize="354,194" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[String.Format(in_Config(&quot;원본파일&quot;).ToString, &quot;_추가데이터&quot;)]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Flie Copy Finish. .&quot;]" />
   </Sequence>
 </Activity>
