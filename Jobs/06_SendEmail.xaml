@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>957,1410</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,1410</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Send_Email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,65" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Send E-Mail Strat. .&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Send E-Mail Strat. .&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -128,8 +128,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiPath_Gmail" CacheStrategy="None" DisplayName="로그인 정보 | Get Credential" FolderPath="sbzkdl@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPW]" Username="[strEmail]" />
-    <ui:CommentOut DisplayName="첫번째 제출 | Comment Out" sap:VirtualizedContainerService.HintSize="452,65" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiPath_Gmail" CacheStrategy="None" DisplayName="로그인 정보 | Get Credential" FolderPath="sbzkdl@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[strPW]" Username="[strEmail]" />
+    <ui:CommentOut DisplayName="첫번째 제출 | Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,341" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -162,7 +162,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="- SMTP 서버명 : smtp.gmail.com, smtp.naver.com&#xA;- SMTP 포트 : 587&#xA;&#xA;- String.Format&#xA;[부동산공시] {0} 부동산공시가격 과제 제출_{1}" Body="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;메일본문_2&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyy/MM/dd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_intTotalCount.ToString,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_intSuccessCount.ToString,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_intFailCount.ToString,&#xA;&#x9;&#x9;&#x9;&#x9; &#x9;String.Join(&quot;,&quot;, in_listFail.Select(Function(x) x.Trim))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" DisplayName="두번째 제출 메일 보내기 | Send SMTP Mail Message" Email="[strEmail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="452,436" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[strPW]" Server="smtp.gmail.com" Subject="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;메일제목_2&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyy/MM/dd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" To="[in_Config(&quot;과제제출&quot;).ToString]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="- SMTP 서버명 : smtp.gmail.com, smtp.naver.com&#xA;- SMTP 포트 : 587&#xA;&#xA;- String.Format&#xA;[부동산공시] {0} 부동산공시가격 과제 제출_{1}" Body="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;메일본문_2&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyy/MM/dd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_intTotalCount.ToString,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_intSuccessCount.ToString,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_intFailCount.ToString,&#xA;&#x9;&#x9;&#x9;&#x9; &#x9;String.Join(&quot;,&quot;, in_listFail.Select(Function(x) x.Trim))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" DisplayName="두번째 제출 메일 보내기 | Send SMTP Mail Message" Email="[strEmail]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="452,428" sap2010:WorkflowViewState.IdRef="SendMail_4" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[strPW]" Server="smtp.gmail.com" Subject="[String.Format(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in_Config(&quot;메일제목_2&quot;).ToString, &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Today.ToString(&quot;yyyy/MM/dd&quot;), &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;박건후&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;)]" To="[in_Config(&quot;과제제출&quot;).ToString]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Format(
@@ -180,7 +180,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SendMail>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,460" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,492" sap2010:WorkflowViewState.IdRef="CommentOut_3">
       <ui:CommentOut.Body>
         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,341" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
